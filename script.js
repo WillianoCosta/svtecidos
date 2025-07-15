@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // #############################################################
     // COLE A URL DO SEU APP SCRIPT AQUI
     // #############################################################
-    const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZIZQ7srWVa9JoNvnkHcZ80dxpcPRHztermDFjiHlWq_AHDK2i3KsUi9sy8mLgYaGUNA/exec';
+    const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWTNZ14sMul8aKL3VMsiG8ibgUeZvUQDyDhGm7fsREuEGM7-nEJAwQrydd1HeyeTJCzg/exec';
 
     // #############################################################
     // COLOQUE O NÚMERO DE WHATSAPP DO SEU PRIMO AQUI (COM CÓDIGO DO PAÍS)
