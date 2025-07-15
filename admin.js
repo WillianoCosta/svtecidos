@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // #############################################################
     // COLE A URL DO SEU APP SCRIPT AQUI (A MESMA DO OUTRO ARQUIVO)
     // #############################################################
-    const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwZIZQ7srWVa9JoNvnkHcZ80dxpcPRHztermDFjiHlWq_AHDK2i3KsUi9sy8mLgYaGUNA/exec';
+    const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWTNZ14sMul8aKL3VMsiG8ibgUeZvUQDyDhGm7fsREuEGM7-nEJAwQrydd1HeyeTJCzg/exec';
 
     const form = document.getElementById('product-form');
     const formTitle = document.getElementById('form-title');
