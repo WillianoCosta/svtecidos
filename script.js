@@ -2,12 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // #############################################################
     // COLE A URL DO SEU APP SCRIPT AQUI
     // #############################################################
-    const APP_SCRIPT_URL = 'URL_DO_SEU_APP_SCRIPT_AQUI';
+    const APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxnK8Mt2eIDv3BRTFiP8uUptTuWIXs7WYTy7ro85vmd_PC8vrbaWwJ5wWljTspTJU16/exec';
 
     // #############################################################
     // COLOQUE O NÚMERO DE WHATSAPP DO SEU PRIMO AQUI (COM CÓDIGO DO PAÍS)
     // #############################################################
-    const WHATSAPP_NUMBER = '5511999999999'; // Exemplo: 55 para Brasil, 11 para DDD, etc.
+    const WHATSAPP_NUMBER = '5584996106961'; // Exemplo: 55 para Brasil, 11 para DDD, etc.
 
 
     const productList = document.getElementById('product-list');
