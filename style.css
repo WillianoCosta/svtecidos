@@ -29,6 +29,8 @@ main {
     padding: 1rem;
     max-width: 1200px;
     margin: auto;
+    /* Adiciona padding-bottom para dar espaço ao carrinho fixo */
+    padding-bottom: 200px; /* Ajuste este valor conforme a altura do seu carrinho */
 }
 
 main h2 {
@@ -123,6 +125,22 @@ main h2 {
     padding: 1rem;
     max-height: 400px;
     overflow-y: auto;
+    /* Adicionar media query para telas menores */
+    z-index: 1000; /* Garante que o carrinho fique acima de outros elementos */
+}
+
+@media (max-width: 768px) {
+    .cart-container {
+        width: calc(100% - 40px); /* Ocupa quase toda a largura da tela */
+        left: 20px; /* Centraliza horizontalmente */
+        right: 20px;
+        bottom: 10px; /* Ajusta a posição para não ficar tão no canto */
+        max-height: 30vh; /* Limita a altura em telas menores */
+    }
+
+    main {
+        padding-bottom: 250px; /* Aumenta o padding-bottom para telas menores */
+    }
 }
 
 #cart-items .cart-item {
