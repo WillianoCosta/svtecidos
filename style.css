@@ -46,10 +46,6 @@ header {
     max-width: 120px; /* Tamanho máximo da logo */
     display: block; /* Garante que a imagem seja tratada como bloco */ 
     margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    border-radius: 50px; /* Adiciona bordas arredondadas à logo */
-    border-color: #ad8821;
-    border-style: solid;
-    border-width: 2px; /* Define a espessura da borda */
     transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
 
 }
