@@ -175,6 +175,23 @@ main h2 {
     }
 }
 
+header {
+        padding: 1rem 0.5rem; /* Reduz o preenchimento para diminuir a altura */
+        padding-bottom: 1rem; /* Ajuste se necessário para o espaçamento da logo/texto */
+        padding-top: 1rem; /* Ajuste se necessário para o espaçamento da logo/texto */
+    }
+
+    .header-logo {
+        max-width: 80px; /* Deixa a logo menor no celular */
+        margin-bottom: 0.1rem; /* Reduz o espaço abaixo da logo */
+    }
+
+    header p {
+        font-size: 0.8rem; /* Diminui o tamanho do texto do slogan */
+        margin-top: 0.2rem; /* Reduz o espaço acima do slogan */
+    }
+
+
 #cart-items .cart-item {
     display: flex;
     justify-content: space-between;
