@@ -3,91 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sua Loja de Produtos</title>
+    <title>SV Tecidos - Qualidade é aqui!</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-        <img src="https://via.placeholder.com/60" alt="Logo da Loja" class="header-logo">
+        <img src="svtec.PNG" alt="Logo SV Tecidos" class="header-logo"> 
         <p>Qualidade é aqui!</p>
     </header>
 
     <main>
         <h2>Nossos Produtos</h2>
-        <section class="product-grid">
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="https://example.com/sua-imagem-produto1.jpg" alt="Produto 1">
-                </div>
-                <div class="product-info">
-                    <h3>Produto Incrível 1</h3>
-                    <p>Uma breve descrição do produto 1, destacando suas qualidades e benefícios.</p>
-                    <span class="product-price">R$ 19,99</span>
-                    <div class="product-actions">
-                        <input type="number" value="1" min="1">
-                        <button onclick="addToCart('Produto Incrível 1', 19.99, this)">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="https://example.com/sua-imagem-produto2.jpg" alt="Produto 2">
-                </div>
-                <div class="product-info">
-                    <h3>Produto Fantástico 2</h3>
-                    <p>Descrição detalhada do produto 2, mostrando por que ele é a melhor escolha.</p>
-                    <span class="product-price">R$ 29,50</span>
-                    <div class="product-actions">
-                        <input type="number" value="1" min="1">
-                        <button onclick="addToCart('Produto Fantástico 2', 29.50, this)">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="https://example.com/sua-imagem-produto3.jpg" alt="Produto 3">
-                </div>
-                <div class="product-info">
-                    <h3>Item Essencial 3</h3>
-                    <p>Um item indispensável para o seu dia a dia, com qualidade garantida.</p>
-                    <span class="product-price">R$ 9,90</span>
-                    <div class="product-actions">
-                        <input type="number" value="1" min="1">
-                        <button onclick="addToCart('Item Essencial 3', 9.90, this)">+</button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="product-card">
-                <div class="image-container">
-                    <img src="https://example.com/sua-imagem-produto4.jpg" alt="Produto 4">
-                </div>
-                <div class="product-info">
-                    <h3>Solução Completa 4</h3>
-                    <p>A solução perfeita para suas necessidades, combinando funcionalidade e design.</p>
-                    <span class="product-price">R$ 49,00</span>
-                    <div class="product-actions">
-                        <input type="number" value="1" min="1">
-                        <button onclick="addToCart('Solução Completa 4', 49.00, this)">+</button>
-                    </div>
-                </div>
-            </div>
-        </section>
+        <div id="product-list" class="product-grid">
+            <p id="loading-message">Carregando produtos...</p>
+        </div>
     </main>
 
     <div class="cart-container">
-        <h3>Seu Carrinho</h3>
+        <h3>Orçamento</h3>
         <div id="cart-items">
-            </div>
-        <p>Total: R$ <span id="cart-total">0.00</span></p>
-        <button id="whatsapp-button" disabled>Finalizar Pedido (WhatsApp)</button>
+            <p>Seu carrinho de orçamento está vazio.</p>
+        </div>
+        <button id="whatsapp-button" disabled>Solicitar Orçamento via WhatsApp</button>
     </div>
 
-    <div id="add-to-cart-message" class="add-to-cart-message">
-        Produto adicionado!
-    </div>
+    <footer>
+        <p>&copy; 2025 SV Tecidos</p>
+        <p style="margin: 0; font-size: 14px; color: #555;">
+      Desenvolvido por <strong>
+        <a href="https://willianocosta.github.io/Portfolio/" style="color: #caa94e; text-decoration: none;" target="_blank">
+          Wiliano Costa
+        </a>
+      </strong>
+    </footer>
 
     <script src="script.js"></script>
 </body>
