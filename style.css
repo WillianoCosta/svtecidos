@@ -18,7 +18,17 @@ header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem; /* Ajustei para permitir espaço para a logo */
+    display: flex; /* Para alinhar a logo e o texto */
+    flex-direction: column; /* Coloca os itens em coluna por padrão */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.header-logo {
+    max-width: 120px; /* Tamanho da sua logo, ajuste conforme necessário */
+    height: auto;
+    margin-bottom: 0.5rem; /* Espaço entre a logo e o título */
 }
 
 header h1 {
@@ -29,8 +39,7 @@ main {
     padding: 1rem;
     max-width: 1200px;
     margin: auto;
-    /* Adiciona padding-bottom para dar espaço ao carrinho fixo em telas maiores */
-    padding-bottom: 200px; /* Mantém este valor como base */
+    padding-bottom: 200px; /* Mantém este valor como base para telas maiores */
 }
 
 main h2 {
@@ -125,21 +134,20 @@ main h2 {
     padding: 1rem;
     max-height: 400px;
     overflow-y: auto;
-    z-index: 1000; /* Garante que o carrinho fique acima de outros elementos */
+    z-index: 1000;
 }
 
 @media (max-width: 768px) {
     .cart-container {
-        width: calc(100% - 40px); /* Ocupa quase toda a largura da tela */
-        left: 20px; /* Centraliza horizontalmente */
+        width: calc(100% - 40px);
+        left: 20px;
         right: 20px;
-        bottom: 10px; /* Ajusta a posição para não ficar tão no canto */
-        max-height: 30vh; /* Limita a altura em telas menores */
+        bottom: 10px;
+        max-height: 30vh;
     }
 
-    /* AUMENTADO O PADDING-BOTTOM AQUI */
     main {
-        padding-bottom: 300px; /* Aumenta o padding-bottom para telas menores */
+        padding-bottom: 300px;
     }
 }
 
