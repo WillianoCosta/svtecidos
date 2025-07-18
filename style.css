@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #2c3e50;
-    --secondary-color: #3498db;
+    --primary-color: #0f0f0e;
+    --secondary-color: #caa94e;
     --background-color: #ecf0f1;
     --card-bg-color: #ffffff;
     --text-color: #333;
@@ -18,23 +18,51 @@ header {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
-    padding: 1rem 1rem; /* Ajustei para permitir espaço para a logo */
+    padding: 1 1rem; /* Ajustei para permitir espaço para a logo */
     display: flex; /* Para alinhar a logo e o texto */
     flex-direction: column; /* Coloca os itens em coluna por padrão */
     align-items: center; /* Centraliza os itens horizontalmente */
     justify-content: center; /* Centraliza os itens verticalmente */
+    position: sticky; /* Fixa o header no topo da página */
+    top: 0; /* Fixa no topo */
+    width: 100%; /* Garante que o header ocupe toda a largura */
+    z-index: 1000; /* Garante que o header fique acima de outros elementos */
+    border-bottom: 2px solid var(--secondary-color); /* Adiciona uma borda inferior */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil */
+    padding-bottom: 2rem; /* Espaço extra para a logo */
+    padding-top: 2rem; /* Espaço extra para a logo */
+    
+
 }
 
 .header-logo {
     max-width: 120px; /* Tamanho da sua logo, ajuste conforme necessário */
     height: auto;
-    margin-bottom: 0.5rem; /* Espaço entre a logo e o título */
+    margin-bottom: 0.2rem; /* Espaço entre a logo e o título */
+}
+.header-logo{
+    width: 100%;
+    height: auto;
+    max-width: 120px; /* Tamanho máximo da logo */
+    display: block; /* Garante que a imagem seja tratada como bloco */ 
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    border-radius: 50px; /* Adiciona bordas arredondadas à logo */
+    border-color: #ad8821;
+    border-style: solid;
+    border-width: 2px; /* Define a espessura da borda */
+    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
+
 }
 
-header h1 {
-    margin: 0;
-}
 
+header p{
+    margin-top: 0.5rem; /* Espaço entre o título e o slogan */
+    font-size: 1rem; /* Tamanho do texto do slogan */
+    font-weight:lighter; /* Deixa o texto do slogan em negrito */
+    color: var(--secondary-color); /* Cor do slogan */
+    letter-spacing: 1px; /* Espaçamento entre letras do slogan */
+    
+}
 main {
     padding: 1rem;
     max-width: 1200px;
@@ -119,7 +147,7 @@ main h2 {
 }
 
 .product-actions button:hover {
-    background-color: #2980b9;
+    background-color: #000000;
 }
 
 .cart-container {
