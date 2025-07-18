@@ -17,53 +17,40 @@ body {
 header {
     background-color: var(--primary-color);
     color: white;
-    text-align: center;
-    padding: 1 1rem; /* Ajustei para permitir espaço para a logo */
-    display: flex; /* Para alinhar a logo e o texto */
-    flex-direction: column; /* Coloca os itens em coluna por padrão */
-    align-items: center; /* Centraliza os itens horizontalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    position: sticky; /* Fixa o header no topo da página */
-    top: 0; /* Fixa no topo */
-    width: 100%; /* Garante que o header ocupe toda a largura */
-    z-index: 1000; /* Garante que o header fique acima de outros elementos */
-    border-bottom: 2px solid var(--secondary-color); /* Adiciona uma borda inferior */
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Adiciona uma sombra sutil */
-    padding-bottom: 2rem; /* Espaço extra para a logo */
-    padding-top: 2rem; /* Espaço extra para a logo */
-    
-
+    padding: 0.5rem 1rem; /* Reduzido o padding para um cabeçalho mais curto */
+    display: flex; /* Usa flexbox para alinhamento horizontal */
+    align-items: center; /* Alinha itens verticalmente no meio */
+    justify-content: flex-start; /* Alinha itens ao início (esquerda) */
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 2px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .header-logo {
-    max-width: 120px; /* Tamanho da sua logo, ajuste conforme necessário */
-    height: auto;
-    margin-bottom: 0.2rem; /* Espaço entre a logo e o título */
-}
-.header-logo{
-    width: 100%;
-    height: auto;
-    max-width: 120px; /* Tamanho máximo da logo */
-    display: block; /* Garante que a imagem seja tratada como bloco */ 
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    transition: transform 0.3s ease; /* Transição suave para o efeito de hover */
-
+    width: 60px; /* Tamanho menor para o logo */
+    height: 60px; /* Altura igual à largura para um círculo perfeito */
+    object-fit: cover; /* Garante que a imagem cubra a área sem distorção */
+    border-radius: 50%; /* Torna a imagem circular */
+    margin-right: 1rem; /* Espaço entre o logo e o texto */
+    transition: transform 0.3s ease;
 }
 
-
-header p{
-    margin-top: 0.5rem; /* Espaço entre o título e o slogan */
-    font-size: 1rem; /* Tamanho do texto do slogan */
-    font-weight:lighter; /* Deixa o texto do slogan em negrito */
-    color: var(--secondary-color); /* Cor do slogan */
-    letter-spacing: 1px; /* Espaçamento entre letras do slogan */
-    
+header p {
+    margin: 0; /* Remove margem padrão */
+    font-size: 1rem;
+    font-weight: lighter;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
 }
+
 main {
     padding: 1rem;
     max-width: 1200px;
     margin: auto;
-    padding-bottom: 200px; /* Mantém este valor como base para telas maiores */
+    padding-bottom: 200px;
 }
 
 main h2 {
@@ -74,7 +61,7 @@ main h2 {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(2, 1fr); /* Sempre 2 colunas */
     gap: 1.5rem;
 }
 
@@ -87,9 +74,24 @@ main h2 {
     flex-direction: column;
 }
 
-.product-card img {
+.product-card .image-container {
     width: 100%;
-    height: 200px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card .image-container::before {
+    content: "";
+    display: block;
+    padding-bottom: 100%; /* Proporção 1:1 (quadrado) */
+}
+
+.product-card img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -118,28 +120,35 @@ main h2 {
 
 .product-actions {
     display: flex;
-    gap: 10px;
-    margin-top: 1rem;
+    gap: 5px;
+    margin-top: 0.5rem;
     align-items: center;
 }
 
 .product-actions input {
-    width: 60px;
-    padding: 0.5rem;
+    width: 50px;
+    padding: 0.3rem;
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 4px;
+    font-size: 0.8rem;
 }
 
 .product-actions button {
     flex-grow: 1;
-    padding: 0.5rem;
+    padding: 0.3rem; /* Ajuste o padding para o símbolo */
     background-color: var(--secondary-color);
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte para o símbolo '+' */
+    font-weight: bold; /* Deixa o '+' mais visível */
+    line-height: 1; /* Ajusta a altura da linha para centralizar o '+' */
+    display: flex; /* Para centralizar o '+' verticalmente */
+    justify-content: center; /* Para centralizar o '+' horizontalmente */
+    align-items: center; /* Para centralizar o '+' verticalmente */
 }
 
 .product-actions button:hover {
@@ -175,23 +184,6 @@ main h2 {
     }
 }
 
-header {
-        padding: 1rem 0.5rem; /* Reduz o preenchimento para diminuir a altura */
-        padding-bottom: 1rem; /* Ajuste se necessário para o espaçamento da logo/texto */
-        padding-top: 1rem; /* Ajuste se necessário para o espaçamento da logo/texto */
-    }
-
-    .header-logo {
-        max-width: 80px; /* Deixa a logo menor no celular */
-        margin-bottom: 0.1rem; /* Reduz o espaço abaixo da logo */
-    }
-
-    header p {
-        font-size: 0.8rem; /* Diminui o tamanho do texto do slogan */
-        margin-top: 0.2rem; /* Reduz o espaço acima do slogan */
-    }
-
-
 #cart-items .cart-item {
     display: flex;
     justify-content: space-between;
@@ -221,4 +213,27 @@ footer {
     padding: 1rem;
     margin-top: 2rem;
     background-color: #ddd;
+}
+
+/* Estilos para a mensagem de produto adicionado */
+.add-to-cart-message {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    z-index: 2000;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.add-to-cart-message.show {
+    opacity: 1;
+    visibility: visible;
 }
